@@ -3,8 +3,6 @@ let reviews = JSON.parse(localStorage.getItem('swara_reviews')) || [
     { id: 2, name: "Rahul Verma", rating: "5", message: "Biometric attendance system working smoothly. Fast support by engineers." }
 ];
 
-let isAdmin = false;
-
 function displayReviews() {
     const container = document.getElementById('reviewsContainer');
     container.innerHTML = '';
@@ -18,7 +16,6 @@ function displayReviews() {
         reviewDiv.innerHTML = `
             <h4>${review.name} <span style="font-size: 12px; color: #f39c12;">${stars}</span></h4>
             <p>${review.message}</p>
-            ${isAdmin ? `<button class="delete-btn" onclick="deleteReview(${review.id})">Delete</button>` : ''}
         `;
         container.appendChild(reviewDiv);
     });
@@ -42,48 +39,6 @@ document.getElementById('reviewForm').addEventListener('submit', function(e) {
     displayReviews();
     this.reset();
     alert('Thank you for your feedback!');
-});
-
-function deleteReview(id) {
-    reviews = reviews.filter(r => r.id !== id);
-    localStorage.setItem('swara_reviews', JSON.stringify(reviews));
-    displayReviews();
-}
-
-function toggleAdminPanel() {
-    const adminPanel = document.getElementById('admin-panel');
-    isAdmin = !isAdmin;
-    
-    if(isAdmin) {
-        adminPanel.style.display = 'block';
-        alert("Admin Mode Activated. You can now delete reviews or add team members.");
-    } else {
-        adminPanel.style.display = 'none';
-    }
-    displayReviews();
-}
-
-document.getElementById('add-employee-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('emp-name').value;
-    const role = document.getElementById('emp-role').value;
-    const empId = document.getElementById('emp-id').value;
-    const img = document.getElementById('emp-img').value;
-
-    const container = document.getElementById('engineers-container');
-    const newCard = document.createElement('div');
-    newCard.classList.add('team-card', 'engineer-card');
-
-    newCard.innerHTML = `
-        <img src="${img}" alt="${name}">
-        <h4>${name.toUpperCase()}</h4>
-        <p class="designation">${role}</p>
-        <p class="id-no">ID No.: ${empId}</p>
-    `;
-
-    container.appendChild(newCard);
-    this.reset();
-    alert('New Employee added successfully!');
 });
 
 displayReviews();
