@@ -3,122 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swara Technovation - Electronic Security Solutions</title>
+    <title>Swara Technovation - CCTV & Security Systems</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
+    <!-- Navigation Bar -->
     <header>
         <div class="logo-container">
             <h1>SWARA <span>TECHNOVATION</span></h1>
-            <p>Electronic Security Solutions</p>
+            <p class="tagline"><i class="fas fa-shield-alt"></i> CCTV & SECURITY SYSTEMS</p>
         </div>
         <nav>
-            <a href="#about">About Us</a>
+            <a href="#home">Home</a>
+            <a href="#why-cctv">Why CCTV?</a>
             <a href="#services">Services</a>
             <a href="#team">Our Team</a>
             <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact Us</a>
-            <button class="admin-btn" onclick="toggleAdminPanel()"><i class="fas fa-user-shield"></i> Admin Panel</button>
+            <a href="#contact">Contact</a>
+            <button class="admin-btn" onclick="toggleAdminPanel()"><i class="fas fa-user-lock"></i> Admin</button>
         </nav>
     </header>
 
-    <!-- Front Page / Main Banner (1st File - Niche Se Pehli) -->
-    <section id="about" class="company-banner-section">
-        <h2>ABOUT SWARA TECHNOVATION</h2>
-        <div class="banner-wrapper">
-            <!-- 1st File (WA0086.jpg) - Front Page Par Bade Size Mein -->
-            <img src="IMG-20260827-WA0086.jpg" alt="Swara Technovation Main Banner" class="big-company-img">
+    <!-- 1. HOME / FRONT PAGE SECTION -->
+    <section id="home" class="hero-section">
+        <div class="section-title">
+            <h2>WELCOME TO SWARA TECHNOVATION</h2>
+            <p>Your Trusted Partner in Advanced Security Solutions</p>
+        </div>
+        <div class="banner-container">
+            <!-- FRONT PAGE MAIN IMAGE -->
+            <img src="info.jpg" alt="Swara Technovation Info Banner" class="hero-img">
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- WHY CCTV / ADVANTAGES OF CCTV SECTION -->
+    <section id="why-cctv" class="advantages-section">
+        <div class="section-title">
+            <h2>ADVANTAGES OF CCTV & SECURITY SYSTEMS</h2>
+            <p>सुरक्षा ही सबसे पहली प्राथमिकता है - जानिए CCTV कैमरे क्यों ज़रूरी हैं</p>
+        </div>
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <i class="fas fa-eye"></i>
+                <h3>24/7 Continuous Monitoring</h3>
+                <p>अपने घर, दुकान या ऑफिस पर दिन हो या रात, 24 घंटे लगातार नज़र रखें और बेफिक्र रहें।</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Live Mobile Viewing</h3>
+                <p>दुनिया में कहीं से भी अपने स्मार्टफोन पर सीधे लाइव फुटेज और रिकॉर्डिंग देखें।</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-user-shield"></i>
+                <h3>Crime Deterrence</h3>
+                <p>सीसीटीवी कैमरे की मौजूदगी से ही चोरी, डकैती और असामाजिक गतिविधियों में भारी कमी आती है।</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-folder-open"></i>
+                <h3>Evidence & Proof</h3>
+                <p>किसी भी अप्रिय घटना या कानूनी मामले में फुल एचडी वीडियो रिकॉर्डिंग ठोस सबूत का काम करती है।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SERVICES SECTION -->
     <section id="services" class="services-section">
-        <h2>OUR SERVICES</h2>
+        <div class="section-title">
+            <h2>OUR CORE SERVICES</h2>
+            <p>हम प्रदान करते हैं बेहतरीन क्वालिटी और त्वरित सर्विस</p>
+        </div>
         <div class="services-grid">
-            <div class="service-card"><i class="fas fa-video"></i><h3>CCTV Surveillance System</h3><p>High definition CCTV cameras for 24x7 monitoring and recording.</p></div>
-            <div class="service-card"><i class="fas fa-shield-alt"></i><h3>Security Alarm System</h3><p>Advanced burglar alarm systems for complete protection.</p></div>
-            <div class="service-card"><i class="fas fa-fire-extinguisher"></i><h3>Fire Alarm System</h3><p>Reliable fire detection and alarm systems for early warning.</p></div>
-            <div class="service-card"><i class="fas fa-door-open"></i><h3>Video Door Phone</h3><p>Secure your entrance with smart video door phone systems.</p></div>
-            <div class="service-card"><i class="fas fa-fingerprint"></i><h3>Access Control & Biometric</h3><p>Accurate attendance and secure access management.</p></div>
-            <div class="service-card"><i class="fas fa-solar-panel"></i><h3>Solar System & Timers</h3><p>Sustainable energy solutions and programmable digital timers.</p></div>
+            <div class="service-box">
+                <i class="fas fa-video"></i>
+                <h3>HD & IP CCTV Cameras</h3>
+                <p>HD, IP, Wi-Fi और 360-डिग्री नाइट विजन कैमरों की उच्च गुणवत्ता वाली स्थापना।</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-bell"></i>
+                <h3>Burglar Security Alarm</h3>
+                <p>अनाधिकृत प्रवेश या चोरी की कोशिश पर तुरंत अलर्ट करने वाले स्मार्ट अलार्म।</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-fire-extinguisher"></i>
+                <h3>Fire Alarm Systems</h3>
+                <p>आग या धुएं का पता लगाकर तुरंत सचेत करने वाली आधुनिक प्रणाली।</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-door-open"></i>
+                <h3>Video Door Phone</h3>
+                <p>दरवाजा खोलने से पहले मुख्य द्वार पर खड़े व्यक्ति को देखें और बात करें।</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-fingerprint"></i>
+                <h3>Biometric & Access Control</h3>
+                <p>कर्मचारियों की उपस्थिति (Attendance) और सुरक्षित एक्सेस के लिए फिंगरप्रिंट/फेस रीडर।</p>
+            </div>
+            <div class="service-box">
+                <i class="fas fa-solar-panel"></i>
+                <h3>Solar Power & Timers</h3>
+                <p>सोलर सिक्योरिटी सॉल्यूशन और ऑटोमैटिक डिजिटल टाइमर इंस्टालेशन।</p>
+            </div>
         </div>
     </section>
 
-    <!-- Team Section -->
+    <!-- 3. OUR TEAM SECTION -->
     <section id="team" class="team-section">
-        <h2>OUR TEAM</h2>
+        <div class="section-title">
+            <h2>MEET OUR TEAM</h2>
+            <p>हमारी अनुभवी और समर्पित टीम</p>
+        </div>
 
-        <!-- Founder & CEO (4th File) -->
-        <div class="role-group">
-            <h3>Founder & CEO</h3>
-            <div class="team-grid single-card">
-                <div class="team-card ceo-card">
-                    <!-- 4th File (WA0049.jpg) - CEO -->
-                    <img src="IMG-20260827-WA0049.jpg" alt="Prashant K Datir">
+        <!-- CEO -->
+        <div class="team-category">
+            <h3 class="category-title">FOUNDER & CEO</h3>
+            <div class="team-grid single-member">
+                <div class="member-card highlight-card">
+                    <img src="ceo.jpg" alt="Prashant K Datir">
                     <h4>PRASHANT K DATIR</h4>
-                    <p class="designation">Founder & CEO</p>
-                    <p class="id-no">ID No.: 522095546852</p>
+                    <p class="role">Founder & CEO</p>
+                    <p class="id-tag"><i class="fas fa-id-card"></i> ID: 522095546852</p>
                 </div>
             </div>
         </div>
 
-        <!-- Account & Administration (6th File - Sabse Upar Wali) -->
-        <div class="role-group">
-            <h3>Account & Administration</h3>
-            <div class="team-grid single-card">
-                <div class="team-card acc-card">
-                    <!-- 6th File (WA0047.jpg) - Account & Admin -->
-                    <img src="IMG-20260827-WA0047.jpg" alt="Rupali Prashant Datir">
+        <!-- ACCOUNTANT -->
+        <div class="team-category">
+            <h3 class="category-title">ACCOUNT & ADMINISTRATION</h3>
+            <div class="team-grid single-member">
+                <div class="member-card">
+                    <img src="account.jpg" alt="Rupali Prashant Datir">
                     <h4>RUPALI PRASHANT DATIR</h4>
-                    <p class="designation">Account & Administration</p>
-                    <p class="id-no">ID No.: 384204262417</p>
+                    <p class="role">Account & Administration</p>
+                    <p class="id-tag"><i class="fas fa-id-card"></i> ID: 384204262417</p>
                 </div>
             </div>
         </div>
 
-        <!-- Service Engineers Section (2nd, 3rd, and 5th Files) -->
-        <div class="role-group">
-            <h3>Service Engineers</h3>
+        <!-- SERVICE ENGINEERS -->
+        <div class="team-category">
+            <h3 class="category-title">SERVICE ENGINEERS</h3>
             <div class="team-grid engineers-grid" id="engineers-container">
-                
-                <!-- 2nd File (WA0053.jpg) - Service Engineer Omkar -->
-                <div class="team-card engineer-card">
-                    <img src="IMG-20260827-WA0053.jpg" alt="Omkar B. Rahinj">
+                <!-- Om -->
+                <div class="member-card">
+                    <img src="empom.jpg" alt="Omkar B Rahinj">
                     <h4>ONKAR B RAHINJ</h4>
-                    <p class="designation">Service Engineer</p>
-                    <p class="id-no">ID No.: 436653004080</p>
+                    <p class="role">Service Engineer</p>
+                    <p class="id-tag"><i class="fas fa-id-card"></i> ID: 436653004080</p>
                 </div>
 
-                <!-- 3rd File (WA0052(1).jpg) - Service Engineer -->
-                <div class="team-card engineer-card">
-                    <img src="IMG-20260827-WA0052(1).jpg" alt="Service Engineer">
+                <!-- Dinesh -->
+                <div class="member-card">
+                    <img src="enpdinesh.jpg" alt="Dinesh K Sonawane">
                     <h4>DINESH K SONAWANE</h4>
-                    <p class="designation">Service Engineer</p>
-                    <p class="id-no">ID No.: 635095797861</p>
+                    <p class="role">Service Engineer</p>
+                    <p class="id-tag"><i class="fas fa-id-card"></i> ID: 635095797861</p>
                 </div>
 
-                <!-- 5th File (WA0048.jpg) - Service Engineer -->
-                <div class="team-card engineer-card">
-                    <img src="IMG-20260827-WA0048.jpg" alt="Service Engineer">
+                <!-- Nandu -->
+                <div class="member-card">
+                    <img src="empnandu.jpg" alt="Nandu Ravji Bodke">
                     <h4>NANDU RAVJI BODKE</h4>
-                    <p class="designation">Service Engineer</p>
-                    <p class="id-no">ID No.: 522095546852</p>
+                    <p class="role">Service Engineer</p>
+                    <p class="id-tag"><i class="fas fa-id-card"></i> ID: 522095546852</p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Admin Panel Controls -->
+    <!-- ADMIN PANEL -->
     <div id="admin-panel" class="admin-panel">
         <h3><i class="fas fa-user-cog"></i> Admin Dashboard Control</h3>
-        <p>Status: <span style="color: #27ae60; font-weight: bold;">Logged In as Admin</span></p>
+        <p>Status: <span style="color: #27ae60; font-weight: bold;">Logged In</span></p>
         
         <div class="admin-actions">
-            <h4>Add New Service Engineer / Staff</h4>
+            <h4>Add New Team Member</h4>
             <form id="add-employee-form">
                 <input type="text" id="emp-name" placeholder="Full Name" required>
                 <input type="text" id="emp-role" placeholder="Role (e.g. Service Engineer)" required>
@@ -129,9 +190,11 @@
         </div>
     </div>
 
-    <!-- Reviews & Inquiry Section -->
+    <!-- REVIEWS SECTION -->
     <section id="reviews" class="reviews-section">
-        <h2>CUSTOMER REVIEWS & INQUIRIES</h2>
+        <div class="section-title">
+            <h2>CUSTOMER REVIEWS & INQUIRIES</h2>
+        </div>
         
         <div class="review-form-container">
             <h3>Post Your Feedback / Ask About Products</h3>
@@ -152,12 +215,12 @@
         <div class="reviews-list" id="reviewsContainer"></div>
     </section>
 
-    <!-- Contact Details -->
+    <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section">
         <h2>CONTACT US</h2>
         <div class="contact-details">
             <p><i class="fas fa-map-marker-alt"></i> Plot-6, 1st Floor, Near Saptashrungi Temple, Opp Minatai Thakre Garden, Shivajinagar, Satpur, Nashik</p>
-            <p><i class="fas fa-phone"></i> +91 9273175999 | 0253 4518890</p>
+            <p><i class="fas fa-phone-alt"></i> +91 9273175999 | 0253 4518890</p>
             <p><i class="fas fa-envelope"></i> swaratechnovation@gmail.com</p>
             <p><i class="fab fa-instagram"></i> swara_technovation</p>
         </div>
