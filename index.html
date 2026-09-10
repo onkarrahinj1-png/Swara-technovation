@@ -1,212 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Suppliers</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Swara Technovation - Electronic Security Solutions</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Header / Navigation -->
     <header>
-        <div class="logo">
-            <i class="fa-solid fa-book-open-reader"></i>
-            <h1>Study <span>Suppliers</span></h1>
+        <div class="logo-container">
+            <h1>SWARA <span>TECHNOVATION</span></h1>
+            <p>Electronic Security Solutions</p>
         </div>
         <nav>
-            <ul id="navLinks"></ul>
+            <a href="#about">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#team">Our Team</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact Us</a>
+            <button class="admin-btn" onclick="toggleAdminPanel()"><i class="fas fa-user-shield"></i> Admin Panel</button>
         </nav>
     </header>
 
-    <!-- Main Authentication Container (Login / Admin) -->
-    <div id="authContainer" class="auth-wrapper">
-        <div class="auth-box">
-            
-            <!-- Views Toggle Tabs -->
-            <div class="auth-tabs" id="authTabsHeader">
-                <button type="button" class="auth-tab-btn active" id="showLoginBtn">User Login</button>
-                <button type="button" class="auth-tab-btn" id="showAdminBtn">Admin Login</button>
+    <!-- Hero Section / Company Information (Big Image Banner) -->
+    <section id="about" class="company-banner-section">
+        <h2>ABOUT SWARA TECHNOVATION</h2>
+        <div class="banner-wrapper">
+            <!-- बड़ी कंपनी इंफॉर्मेशन इमेज (WA0047.jpg) -->
+            <img src="IMG-20260827-WA0047.jpg" alt="Swara Technovation Information Brochure" class="big-company-img">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>OUR SERVICES</h2>
+        <div class="services-grid">
+            <div class="service-card"><i class="fas fa-video"></i><h3>CCTV Surveillance System</h3><p>High definition CCTV cameras for 24x7 monitoring and recording.</p></div>
+            <div class="service-card"><i class="fas fa-shield-alt"></i><h3>Security Alarm System</h3><p>Advanced burglar alarm systems for complete protection.</p></div>
+            <div class="service-card"><i class="fas fa-fire-extinguisher"></i><h3>Fire Alarm System</h3><p>Reliable fire detection and alarm systems for early warning.</p></div>
+            <div class="service-card"><i class="fas fa-door-open"></i><h3>Video Door Phone</h3><p>Secure your entrance with smart video door phone systems.</p></div>
+            <div class="service-card"><i class="fas fa-fingerprint"></i><h3>Access Control & Biometric</h3><p>Accurate attendance and secure access management.</p></div>
+            <div class="service-card"><i class="fas fa-solar-panel"></i><h3>Solar System & Timers</h3><p>Sustainable energy solutions and programmable digital timers.</p></div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <h2>OUR TEAM</h2>
+
+        <!-- 1. CEO Section -->
+        <div class="role-group">
+            <h3>Founder & CEO</h3>
+            <div class="team-grid single-card">
+                <div class="team-card ceo-card">
+                    <!-- पहली इमेज: WA0086.jpg -->
+                    <img src="IMG-20260827-WA0086.jpg" alt="Prashant K Datir">
+                    <h4>PRASHANT K DATIR</h4>
+                    <p class="designation">Founder & CEO</p>
+                    <p class="id-no">ID No.: 522095546852</p>
+                </div>
             </div>
+        </div>
 
-            <!-- User Login Form -->
-            <form id="userLoginForm" class="auth-form">
-                <h2>User Login</h2>
-                <input type="email" id="loginEmail" placeholder="Email Address" required>
-                <input type="password" id="loginPassword" placeholder="Password" required>
-                <button type="submit" class="submit-btn">Login</button>
-                
-                <p class="auth-switch-text">
-                    New user? <a href="#" id="goToSignupLink">Register here</a>
-                </p>
+        <!-- 2. Accountant Section -->
+        <div class="role-group">
+            <h3>Account & Administration</h3>
+            <div class="team-grid single-card">
+                <div class="team-card acc-card">
+                    <!-- दूसरी इमेज: WA0053.jpg -->
+                    <img src="IMG-20260827-WA0053.jpg" alt="Rupali Prashant Datir">
+                    <h4>RUPALI PRASHANT DATIR</h4>
+                    <p class="designation">Account & Administration</p>
+                    <p class="id-no">ID No.: 384204262417</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Service Engineers Section (तीनों एक ही सेक्शन/टैब में) -->
+        <div class="role-group">
+            <h3>Service Engineers</h3>
+            <div class="team-grid engineers-grid" id="engineers-container">
+                <!-- तीसरी इमेज: WA0052(1).jpg -->
+                <div class="team-card engineer-card">
+                    <img src="IMG-20260827-WA0052(1).jpg" alt="Service Engineer">
+                    <h4>ONKAR B RAHINJ</h4>
+                    <p class="designation">Service Engineer</p>
+                    <p class="id-no">ID No.: 436653004080</p>
+                </div>
+
+                <!-- चौथी इमेज: WA0049.jpg -->
+                <div class="team-card engineer-card">
+                    <img src="IMG-20260827-WA0049.jpg" alt="Service Engineer">
+                    <h4>DINESH K SONAWANE</h4>
+                    <p class="designation">Service Engineer</p>
+                    <p class="id-no">ID No.: 635095797861</p>
+                </div>
+
+                <!-- पांचवीं इमेज: WA0048.jpg -->
+                <div class="team-card engineer-card">
+                    <img src="IMG-20260827-WA0048.jpg" alt="Service Engineer">
+                    <h4>NANDU RAVJI BODKE</h4>
+                    <p class="designation">Service Engineer</p>
+                    <p class="id-no">ID No.: 522095546852</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel Controls (Hidden Mode) -->
+    <div id="admin-panel" class="admin-panel">
+        <h3><i class="fas fa-user-cog"></i> Admin Dashboard Control</h3>
+        <p>Status: <span style="color: #27ae60; font-weight: bold;">Logged In as Admin</span></p>
+        
+        <div class="admin-actions">
+            <h4>Add New Service Engineer / Staff</h4>
+            <form id="add-employee-form">
+                <input type="text" id="emp-name" placeholder="Full Name" required>
+                <input type="text" id="emp-role" placeholder="Role (e.g. Service Engineer)" required>
+                <input type="text" id="emp-id" placeholder="ID Number" required>
+                <input type="text" id="emp-img" placeholder="Image File Name (e.g. photo.jpg)" required>
+                <button type="submit">Add Member</button>
             </form>
-
-            <!-- User Registration Form (Separate View) -->
-            <form id="userSignupForm" class="auth-form hidden">
-                <h2>Create New Account</h2>
-                <input type="text" id="signupName" placeholder="Full Name" required>
-                <input type="email" id="signupEmail" placeholder="Email Address" required>
-                <input type="password" id="signupPassword" placeholder="Password" required>
-                <button type="submit" class="submit-btn">Register Account</button>
-                
-                <p class="auth-switch-text">
-                    Already registered? <a href="#" id="goToLoginLink">Back to Login</a>
-                </p>
-            </form>
-
-            <!-- Admin Login Form -->
-            <form id="adminLoginForm" class="auth-form hidden">
-                <h2>Admin Login</h2>
-                <input type="email" id="adminEmail" placeholder="Admin Email" required>
-                <input type="password" id="adminPassword" placeholder="Admin Password" required>
-                <input type="password" id="adminSecretKey" placeholder="Secret Key (Demo: admin123)" required>
-                <button type="submit" class="submit-btn admin-btn">Login as Admin</button>
-            </form>
-
         </div>
     </div>
 
-    <!-- Main Application Area -->
-    <div id="mainApp" class="hidden">
-        <section class="hero">
-            <h2 id="heroTitle">Welcome to Study Suppliers</h2>
-            <p id="heroSubtitle">Select your course to access Textbooks, Question Papers, and Practicals.</p>
-        </section>
-
-        <div class="main-wrapper">
-            <main class="container">
-                
-                <!-- View 1: Course Selection -->
-                <div id="courseSelectionView" class="view-section">
-                    <h2 class="section-title">Select Your Course</h2>
-                    <div class="course-grid">
-                        
-                        <div class="course-card" onclick="openCourse('fy')">
-                            <i class="fa-solid fa-graduation-cap course-icon"></i>
-                            <h3>FY BCom CA</h3>
-                            <p>First Year BCom Computer Applications</p>
-                            <button class="explore-btn">Open Course <i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-
-                        <div class="course-card" onclick="openCourse('sy')">
-                            <i class="fa-solid fa-user-graduate course-icon"></i>
-                            <h3>SY BCom CA</h3>
-                            <p>Second Year BCom Computer Applications</p>
-                            <button class="explore-btn">Open Course <i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-
-                        <div class="course-card" onclick="openCourse('ty')">
-                            <i class="fa-solid fa-award course-icon"></i>
-                            <h3>TY BCom CA</h3>
-                            <p>Third Year BCom Computer Applications</p>
-                            <button class="explore-btn">Open Course <i class="fa-solid fa-arrow-right"></i></button>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- View 2: Course Materials -->
-                <div id="courseDetailView" class="view-section hidden">
-                    <button class="back-btn" onclick="showHome()"><i class="fa-solid fa-arrow-left"></i> Back to Courses</button>
-                    <h2 class="section-title" id="selectedCourseTitle">Course Materials</h2>
-                    
-                    <div id="materialsGrid"></div>
-                </div>
-
-                <!-- View 3: User Upload & Share PDF Section -->
-                <div id="userUploadView" class="view-section hidden">
-                    <button class="back-btn" onclick="showHome()"><i class="fa-solid fa-arrow-left"></i> Back to Courses</button>
-                    <h2 class="section-title"><i class="fa-solid fa-share-nodes"></i> Share & Upload PDF Link</h2>
-                    
-                    <div class="user-upload-box">
-                        <h3>Upload PDF to Course Section</h3>
-                        <p style="margin-bottom: 15px; color: #64748b;">Uploaded PDFs will be instantly displayed line-by-line inside the selected section.</p>
-                        
-                        <form id="userShareForm" class="admin-form">
-                            <select id="userMatCourse" required>
-                                <option value="">Select Target Course</option>
-                                <option value="fy">FY BCom CA</option>
-                                <option value="sy">SY BCom CA</option>
-                                <option value="ty">TY BCom CA</option>
-                            </select>
-
-                            <select id="userMatType" required>
-                                <option value="Practical Files">Practical Files</option>
-                                <option value="Textbooks">Textbooks / Notes</option>
-                                <option value="Question Papers">Question Papers</option>
-                                <option value="Shared PDFs">Shared PDFs Section</option>
-                            </select>
-
-                            <input type="text" id="userMatTitle" placeholder="Document Title" required>
-                            <input type="url" id="userMatUrl" placeholder="Google Drive Link or Direct PDF URL" required>
-                            <button type="submit" class="submit-btn share-btn"><i class="fa-solid fa-paper-plane"></i> Upload PDF Now</button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- View 4: Admin Management Panel -->
-                <div id="adminPanelView" class="view-section hidden">
-                    <button class="back-btn" onclick="showHome()"><i class="fa-solid fa-arrow-left"></i> Back to Courses</button>
-                    <h2 class="section-title"><i class="fa-solid fa-user-shield"></i> Admin Control Panel</h2>
-                    
-                    <!-- Admin Form: Upload PDF -->
-                    <div class="admin-box">
-                        <h3><i class="fa-solid fa-file-circle-plus"></i> Add New Study Material PDF</h3>
-                        <form id="addMaterialForm" class="admin-form">
-                            <select id="matCourse" required>
-                                <option value="">Select Course</option>
-                                <option value="fy">FY BCom CA</option>
-                                <option value="sy">SY BCom CA</option>
-                                <option value="ty">TY BCom CA</option>
-                            </select>
-
-                            <select id="matType" required>
-                                <option value="">Select Material Category</option>
-                                <option value="Practical Files">Practical Files</option>
-                                <option value="Textbooks">Textbook</option>
-                                <option value="Question Papers">Question Paper</option>
-                                <option value="Shared PDFs">Shared PDFs Section</option>
-                            </select>
-
-                            <input type="text" id="matTitle" placeholder="Title" required>
-                            <input type="url" id="matUrl" placeholder="PDF URL / Drive Link" required>
-                            <button type="submit" class="submit-btn admin-btn">Upload Material</button>
-                        </form>
-                    </div>
-
-                    <!-- Admin Section: Registered Users List -->
-                    <div class="admin-box" style="margin-top: 25px;">
-                        <h3><i class="fa-solid fa-users"></i> Registered Users Management</h3>
-                        <p style="font-size: 0.88rem; color: #64748b; margin-top: 5px;">View registered students or delete wrong/invalid registrations.</p>
-                        <div id="adminUsersContainer" style="margin-top: 15px;"></div>
-                    </div>
-
-                    <!-- Admin Section: Uploaded Materials List -->
-                    <div class="admin-box" style="margin-top: 25px;">
-                        <h3><i class="fa-solid fa-folder-open"></i> Uploaded Materials List</h3>
-                        <ul id="adminMaterialList" class="admin-list" style="margin-top: 10px;"></ul>
-                    </div>
-                </div>
-
-            </main>
-
-            <!-- Activity Sidebar -->
-            <aside class="sidebar">
-                <div class="history-box">
-                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Activity Log</h3>
-                    <p class="count-text">Total Activity Items: <span id="downloadCount">0</span></p>
-                    <ul id="historyList" class="history-list">
-                        <li class="empty-msg">No activity yet.</li>
-                    </ul>
-                    <button id="clearHistoryBtn" class="clear-btn">Clear Log</button>
-                </div>
-            </aside>
+    <!-- Reviews & Inquiry Section -->
+    <section id="reviews" class="reviews-section">
+        <h2>CUSTOMER REVIEWS & INQUIRIES</h2>
+        
+        <div class="review-form-container">
+            <h3>Post Your Feedback / Ask About Products</h3>
+            <form id="reviewForm">
+                <input type="text" id="userName" placeholder="Your Name" required>
+                <select id="userRating" required>
+                    <option value="5">⭐⭐⭐⭐⭐ (5/5)</option>
+                    <option value="4">⭐⭐⭐⭐ (4/5)</option>
+                    <option value="3">⭐⭐⭐ (3/5)</option>
+                    <option value="2">⭐⭐ (2/5)</option>
+                    <option value="1">⭐ (1/5)</option>
+                </select>
+                <textarea id="userMessage" rows="4" placeholder="Write your review or inquire about CCTV / Security Systems..." required></textarea>
+                <button type="submit" class="btn">Submit Review</button>
+            </form>
         </div>
 
-    </div>
+        <div class="reviews-list" id="reviewsContainer">
+            <!-- JavaScript dynamically displays reviews here -->
+        </div>
+    </section>
+
+    <!-- Contact Details -->
+    <section id="contact" class="contact-section">
+        <h2>CONTACT US</h2>
+        <div class="contact-details">
+            <p><i class="fas fa-map-marker-alt"></i> Plot-6, 1st Floor, Near Saptashrungi Temple, Opp Minatai Thakre Garden, Shivajinagar, Satpur, Nashik</p>
+            <p><i class="fas fa-phone"></i> +91 9273175999 | 0253 4518890</p>
+            <p><i class="fas fa-envelope"></i> swaratechnovation@gmail.com</p>
+            <p><i class="fab fa-instagram"></i> swara_technovation</p>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Study Suppliers | All Rights Reserved</p>
+        <p>&copy; 2026 Swara Technovation. All Rights Reserved. | ISO 9001:2015 Certified Company</p>
     </footer>
 
     <script src="script.js"></script>
