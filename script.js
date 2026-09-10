@@ -1,12 +1,10 @@
-// Default Initial Reviews
 let reviews = JSON.parse(localStorage.getItem('swara_reviews')) || [
-    { id: 1, name: "Amit Sharma", rating: "5", message: "Installed CCTV cameras at my shop. Great service and installation by Dinesh!" },
-    { id: 2, name: "Rahul Verma", rating: "5", message: "Biometric attendance system working smoothly. Fast support by Onkar." }
+    { id: 1, name: "Amit Sharma", rating: "5", message: "Installed CCTV cameras at my shop. Excellent service!" },
+    { id: 2, name: "Rahul Verma", rating: "5", message: "Biometric attendance system working smoothly. Fast support by engineers." }
 ];
 
 let isAdmin = false;
 
-// Render Reviews
 function displayReviews() {
     const container = document.getElementById('reviewsContainer');
     container.innerHTML = '';
@@ -26,7 +24,6 @@ function displayReviews() {
     });
 }
 
-// Add New Review
 document.getElementById('reviewForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('userName').value;
@@ -47,14 +44,12 @@ document.getElementById('reviewForm').addEventListener('submit', function(e) {
     alert('Thank you for your feedback!');
 });
 
-// Delete Review (Admin Only)
 function deleteReview(id) {
     reviews = reviews.filter(r => r.id !== id);
     localStorage.setItem('swara_reviews', JSON.stringify(reviews));
     displayReviews();
 }
 
-// Toggle Admin Panel Mode
 function toggleAdminPanel() {
     const adminPanel = document.getElementById('admin-panel');
     isAdmin = !isAdmin;
@@ -68,7 +63,6 @@ function toggleAdminPanel() {
     displayReviews();
 }
 
-// Add New Employee dynamically
 document.getElementById('add-employee-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const name = document.getElementById('emp-name').value;
@@ -78,7 +72,7 @@ document.getElementById('add-employee-form').addEventListener('submit', function
 
     const container = document.getElementById('engineers-container');
     const newCard = document.createElement('div');
-    newCard.classList.add('team-card', 'engineer');
+    newCard.classList.add('team-card', 'engineer-card');
 
     newCard.innerHTML = `
         <img src="${img}" alt="${name}">
@@ -92,5 +86,4 @@ document.getElementById('add-employee-form').addEventListener('submit', function
     alert('New Employee added successfully!');
 });
 
-// Initial Load
 displayReviews();
