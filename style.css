@@ -46,7 +46,7 @@ header {
 nav a {
     color: #e2e8f0;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 12px;
     font-size: 14px;
     font-weight: 500;
     transition: color 0.3s;
@@ -56,23 +56,7 @@ nav a:hover {
     color: #38bdf8;
 }
 
-.admin-btn {
-    background: #0284c7;
-    color: white;
-    border: none;
-    padding: 7px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    transition: background 0.3s;
-}
-
-.admin-btn:hover {
-    background: #0369a1;
-}
-
-/* Section Title */
+/* Section Common Styling */
 section {
     padding: 50px 8%;
 }
@@ -266,30 +250,6 @@ section {
     color: #64748b;
 }
 
-/* Admin Dashboard */
-.admin-panel {
-    display: none;
-    background: #f0f9ff;
-    border: 2px dashed #0284c7;
-    padding: 20px;
-    margin: 20px 8%;
-    border-radius: 8px;
-}
-
-.admin-panel form {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-
-.admin-panel input {
-    padding: 10px;
-    flex: 1;
-    border: 1px solid #cbd5e1;
-    border-radius: 5px;
-}
-
 /* Reviews */
 .reviews-section {
     background: #f8fafc;
@@ -337,7 +297,6 @@ section {
     padding: 15px;
     border-left: 4px solid #0284c7;
     border-radius: 6px;
-    position: relative;
 }
 
 /* Contact Footer */
